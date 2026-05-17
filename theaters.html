@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Шапка сайта</title>
+    <title>Театры Петербурга</title>
     
     <!-- Подключение шрифтов -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,99 +14,113 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <button class="menu-button menu-button--chambers">Камерные театры Петербурга</button>
-        <button class="menu-button menu-button--home">Вернуться на главную</button>
-    </header>
+    <!-- ОБЩАЯ ОБЕРТКА ДЛЯ ВСЕГО КОНТЕНТА -->
+    <div class="frame">
+        <header class="header">
+            <div class="header__inner">
+                <a href="index.html" class="header__logo">
+                    Камерные театры Петербурга
+                </a>
+                <nav class="header__nav">
+                    <a href="index.html">Вернуться на главную</a>
+                </nav>
+            </div>
+        </header>
 
-    <section class="theaters">
-        <div class="theaters__container">
-            <div class="theater-card">
-                <div class="theater-card__image">
-                    <img src="images/лого_городской.png" alt="Городской театр">
+        <section class="theaters">
+            <div class="theaters__container">
+                <div class="theater-card">
+                    <div class="theater-card__image">
+                        <img src="images/лого_городской.png" alt="Городской театр">
+                    </div>
+                    <h3 class="theater-card__title">Городской театр</h3>
                 </div>
-                <h3 class="theater-card__title">Городской театр</h3>
-            </div>
-            
-            <div class="theater-card">
-                <div class="theater-card__image">
-                    <img src="images/лого_Малыщицкого.png" alt="Камерный театр Малыщицкого">
+                
+                <div class="theater-card">
+                    <div class="theater-card__image">
+                        <img src="images/лого_Малыщицкого.png" alt="Камерный театр Малыщицкого">
+                    </div>
+                    <h3 class="theater-card__title">Камерный театр<br>Малыщицкого</h3>
                 </div>
-                <h3 class="theater-card__title">Камерный театр<br>Малыщицкого</h3>
-            </div>
-            
-            <div class="theater-card">
-                <div class="theater-card__image">
-                    <img src="images/лого_плохой.png" alt="Плохой театр">
+                
+                <div class="theater-card">
+                    <div class="theater-card__image">
+                        <img src="images/лого_плохой.png" alt="Плохой театр">
+                    </div>
+                    <h3 class="theater-card__title">Плохой театр</h3>
                 </div>
-                <h3 class="theater-card__title">Плохой театр</h3>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="theater-detail" data-booking-link="https://goteatr.ru/afisha/">
-    <h2 class="theater-detail__heading">Городской театр</h2>
-    <div class="theater-detail__content">
-        <div class="theater-detail__left">
-            <div class="theater-detail__image theater-detail__image--left">
-                <img src="images/лого_городской.png" alt="Городской театр">
+        <section class="theater-detail theater-detail--red" data-booking-link="https://goteatr.ru/afisha/">
+            <div class="theater-detail__inner">
+                <h2 class="theater-detail__heading">Городской театр</h2>
+                <div class="theater-detail__content">
+                    <div class="theater-detail__left">
+                        <div class="theater-detail__image--left">
+                            <img src="images/лого_городской.png" alt="Городской театр">
+                        </div>
+                    </div>
+                    <div class="theater-detail__center">
+                        <p class="theater-detail__text">Санкт-Петербургский Городской театр — это театр без&nbsp;четвертой стены, живой и&nbsp;демократичный. Он был создан в&nbsp;концепции "молодые для&nbsp;молодых" и&nbsp;органично соединяет современный театральный язык и&nbsp;традиции русской классической театральной школы. Театр не&nbsp;работает в&nbsp;узкой зоне эксперимента, а&nbsp;стремится быть понятным для всех и&nbsp;сделать из&nbsp;зрителя активного соучастника и&nbsp;соавтора театрального процесса.</p>
+                        <button class="theater-detail__button">Хочу сюда!</button>
+                    </div>
+                    <div class="theater-detail__right">
+                        <div class="theater-detail__image--right">
+                            <img src="images/адрес_городской.png" alt="Городской театр адрес">
+                        </div>
+                        <p class="theater-detail__address">Адрес: Галерная улица, 43</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="theater-detail__center">
-            <p class="theater-detail__text">Санкт-Петербургский Городской театр — это театр без&nbsp;четвертой стены, живой и&nbsp;демократичный. Он был создан в&nbsp;концепции “молодые для&nbsp;молодых” и&nbsp;органично соединяет современный театральный язык и&nbsp;традиции русской классической театральной школы. Театр не&nbsp;работает в&nbsp;узкой зоне эксперимента, а&nbsp;стремится быть понятным для всех и&nbsp;сделать из&nbsp;зрителя активного соучастника и&nbsp;соавтора театрального процесса.</p>
-            <button class="theater-detail__button">Хочу сюда!</button>
-        </div>
-        <div class="theater-detail__right">
-            <div class="theater-detail__image theater-detail__image--right">
-                <img src="images/адрес_городской.png" alt="Городской театр адрес">
+        </section>
+
+        <section class="theater-detail theater-detail--beige" data-booking-link="https://www.vmtheatre.ru/afisha">
+            <div class="theater-detail__inner">
+                <h2 class="theater-detail__heading">Камерный театр<br>Малыщицкого</h2>
+                <div class="theater-detail__content">
+                    <div class="theater-detail__left">
+                        <div class="theater-detail__image--left">
+                            <img src="images/лого_Малыщицкого.png" alt="Камерный театр Малыщицкого">
+                        </div>
+                    </div>
+                    <div class="theater-detail__center">
+                        <p class="theater-detail__text">Уютное, но&nbsp;очень маленькое пространство, где нет места для буфета и&nbsp;практически отсутствует фойе. Театр продолжает традицию формирования интеллектуального репертуара, рассчитанного на&nbsp;зрителя, готового чувствовать и&nbsp;размышлять в&nbsp;театре. Камерность зала, в&nbsp;котором действие происходит вблизи от&nbsp;зрителя, способствует наибольшему «подключению» к&nbsp;происходящему на&nbsp;сцене, сочувствию и&nbsp;сопереживанию героям.</p>
+                        <button class="theater-detail__button">Хочу сюда!</button>
+                    </div>
+                    <div class="theater-detail__right">
+                        <div class="theater-detail__image--right">
+                            <img src="images/адрес_Малыщицкого.png" alt="Адрес Камерного театра">
+                        </div>
+                        <p class="theater-detail__address">Адрес: Восстания, 41</p>
+                    </div>
+                </div>
             </div>
-            <p class="theater-detail__address">Адрес: Галерная улица, 43</p>
-        </div>
+        </section>
+
+        <section class="theater-detail theater-detail--red" data-booking-link="https://badtheatre.orgs.biz/#home">
+            <div class="theater-detail__inner">
+                <h2 class="theater-detail__heading">Плохой театр</h2>
+                <div class="theater-detail__content">
+                    <div class="theater-detail__left">
+                        <div class="theater-detail__image--left">
+                            <img src="images/лого_плохой.png" alt="Плохой театр">
+                        </div>
+                    </div>
+                    <div class="theater-detail__center">
+                        <p class="theater-detail__text">Театр называется «Плохой», так&nbsp;как не&nbsp;имеет привычных атрибутов хорошего театра. Театр не&nbsp;продаёт билеты. Каждый зритель после спектакля может оставить donation, если хочет и&nbsp;сколько хочет. За&nbsp;неделю до&nbsp;каждого спектакля проводится регистрация на&nbsp;спектакль (она закрывается за&nbsp;несколько секунд!) в&nbsp;социальных сетях театра. В&nbsp;«Плохом» нет постоянной труппы и&nbsp;никто не&nbsp;получает заработной платы.</p>
+                        <button class="theater-detail__button">Хочу сюда!</button>
+                    </div>
+                    <div class="theater-detail__right">
+                        <div class="theater-detail__address-box">
+                            <p class="theater-detail__address theater-detail__address--overlay">Адрес: каждый раз новый! Внимательно смотрите афишу</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-</section>
 
-<section class="theater-detail theater-detail--alt" data-booking-link="https://www.vmtheatre.ru/afisha">
-    <h2 class="theater-detail__heading">Камерный театр<br>Малыщицкого</h2>
-    <div class="theater-detail__content">
-        <div class="theater-detail__left">
-            <div class="theater-detail__image theater-detail__image--left">
-                <img src="images/лого_Малыщицкого.png" alt="Камерный театр Малыщицкого">
-            </div>
-        </div>
-        <div class="theater-detail__center">
-            <p class="theater-detail__text">Уютное, но&nbsp;очень маленькое пространство, где нет места для буфета и&nbsp;практически отсутствует фойе. Театр продолжает традицию формирования интеллектуального репертуара, рассчитанного на&nbsp;зрителя, готового чувствовать и&nbsp;размышлять в&nbsp;театре. Камерность зала, в&nbsp;котором действие происходит вблизи от&nbsp;зрителя, способствует наибольшему «подключению» к&nbsp;происходящему на&nbsp;сцене, сочувствию и&nbsp;сопереживанию героям.</p>
-            <button class="theater-detail__button">Хочу сюда!</button>
-        </div>
-        <div class="theater-detail__right">
-            <div class="theater-detail__image theater-detail__image--right">
-                <img src="images/адрес_Малыщицкого.png" alt="Адрес Камерного театра">
-            </div>
-            <p class="theater-detail__address">Адрес: Восстания, 41</p>
-        </div>
-    </div>
-</section>
-
-<section class="theater-detail" data-booking-link="https://badtheatre.orgs.biz/#home">
-    <h2 class="theater-detail__heading">Плохой театр</h2>
-    <div class="theater-detail__content">
-        <div class="theater-detail__left">
-            <div class="theater-detail__image theater-detail__image--left">
-                <img src="images/лого_плохой.png" alt="Плохой театр">
-            </div>
-        </div>
-        <div class="theater-detail__center">
-            <p class="theater-detail__text">Театр называется «Плохой», так&nbsp;как не&nbsp;имеет привычных атрибутов хорошего театра. Театр не&nbsp;продаёт билеты. Каждый зритель после спектакля может оставить donation, если хочет и&nbsp;сколько хочет. За&nbsp;неделю до&nbsp;каждого спектакля проводится регистрация на&nbsp;спектакль (она закрывается за&nbsp;несколько секунд!) в&nbsp;социальных сетях театра. В&nbsp;«Плохом» нет постоянной труппы и&nbsp;никто не&nbsp;получает заработной платы.</p>
-            <button class="theater-detail__button">Хочу сюда!</button>
-        </div>
-        <div class="theater-detail__right">
-            <div class="theater-detail__address-box">
-                <p class="theater-detail__address theater-detail__address--overlay">Адрес: каждый раз новый! Внимательно смотрите афишу</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script src="theaters.js"></script>
-
+    <script src="theaters.js"></script>
 </body>
 </html>

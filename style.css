@@ -1,71 +1,91 @@
+/* Обнуление отступов */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.header {
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Общий контейнер для всего макета (1440px) */
+.frame {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ШАПКА (как на главной) ===== */
+.header {
     background-color: #75082E;
-    padding: 49px 80px 36px 80px;
+    width: 100%;
+}
+
+.header__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    min-height: 129px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.menu-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 0;
-    transition: opacity 0.3s ease;
-}
-
-.menu-button:hover {
-    opacity: 0.8;
-}
-
-.menu-button--chambers {
+.header__logo {
     font-family: 'Alegreya SC', serif;
+    font-weight: 700;
     font-size: 32px;
+    line-height: 1.2;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
 }
 
-.menu-button--home {
+.header__nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__nav a {
     font-family: 'Piazzolla', serif;
+    font-weight: 400;
     font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.header__nav a:hover {
+    opacity: 0.8;
 }
 
 /* Блок с фотографиями театров */
 .theaters {
-    max-width: 1440px;
-    width: 100%;
-    margin: 0 auto;
     background-color: #F0E7DE;
-    min-height: 700px;
-    height: auto;
+    width: 100%;
 }
 
 .theaters__container {
-    max-width: 1440px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
-    padding: 170px 80px 100px 80px;
+    padding: 170px 20px 80px 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    flex-wrap: wrap;
-    gap: 40px;
 }
 
 .theater-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
-    min-width: 250px;
 }
 
 .theater-card__image {
@@ -89,43 +109,55 @@
     color: black;
     text-align: center;
     margin-top: 20px;
-    line-height: 36px
+    line-height: 1.0;
 }
 
 /* Детальная секция театра */
 .theater-detail {
-    max-width: 1440px;
+    width: 100%;
+}
+
+.theater-detail__inner {
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
+    padding: 62px 20px 80px 20px;
+}
+
+.theater-detail--red {
     background-color: #75082E;
-    height: auto;
-    min-height: 614px;
-    padding-bottom: 60px;
+}
+
+.theater-detail--beige {
+    background-color: #F0E7DE;
 }
 
 .theater-detail__heading {
     font-family: 'Alegreya SC', serif;
     font-weight: 700;
     font-size: 40px;
-    color: white;
     text-align: center;
-    padding-top: 62px;
     margin-bottom: 90px;
-    line-height: 36px
+    line-height: 1.0;
+}
+
+.theater-detail--red .theater-detail__heading {
+    color: white;
+}
+
+.theater-detail--beige .theater-detail__heading {
+    color: black;
 }
 
 .theater-detail__content {
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 0 80px;
-    gap: 90px;
+    gap: 40px;
 }
 
 /* Левая колонка */
 .theater-detail__left {
-    padding-left: 0;
-    padding-top: 0;
     flex-shrink: 0;
 }
 
@@ -145,9 +177,6 @@
 
 /* Центральная колонка */
 .theater-detail__center {
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
     flex: 1;
     max-width: 500px;
     display: flex;
@@ -158,14 +187,19 @@
     font-family: 'Piazzolla', serif;
     font-weight: 400;
     font-size: 20px;
-    color: white;
     line-height: 1.3;
+}
+
+.theater-detail--red .theater-detail__text {
+    color: white;
+}
+
+.theater-detail--beige .theater-detail__text {
+    color: black;
 }
 
 .theater-detail__button {
     margin-top: auto;
-    background-color: #C89AA9;
-    color: white;
     font-family: 'Piazzolla', serif;
     font-weight: 800;
     font-size: 24px;
@@ -173,9 +207,20 @@
     border-radius: 40px;
     padding: 10px 30px;
     cursor: pointer;
-    box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.3);
     transition: opacity 0.3s ease;
     align-self: flex-start;
+}
+
+.theater-detail--red .theater-detail__button {
+    background-color: #C89AA9;
+    color: white;
+    box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.3);
+}
+
+.theater-detail--beige .theater-detail__button {
+    background-color: #75082E;
+    color: white;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .theater-detail__button:hover {
@@ -184,12 +229,11 @@
 
 /* Правая колонка */
 .theater-detail__right {
-    padding-right: 0;
-    padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-shrink: 0;
+    margin-left: 20px;
 }
 
 .theater-detail__image--right {
@@ -209,25 +253,16 @@
     font-family: 'Piazzolla', serif;
     font-weight: 400;
     font-size: 20px;
-    color: white;
     text-align: center;
     margin-top: 18px;
 }
 
-/* Чередование фона для секций */
-.theater-detail--alt {
-    background-color: #F0E7DE;
+.theater-detail--red .theater-detail__address {
+    color: white;
 }
 
-.theater-detail--alt .theater-detail__heading,
-.theater-detail--alt .theater-detail__text,
-.theater-detail--alt .theater-detail__address {
+.theater-detail--beige .theater-detail__address {
     color: black;
-}
-
-.theater-detail--alt .theater-detail__button {
-    background-color: #75082E;
-    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Прямоугольник вместо фото */
@@ -241,17 +276,25 @@
     padding: 20px;
 }
 
-/* Текст адреса поверх плашки */
 .theater-detail__address--overlay {
     font-weight: 800;
     margin-top: 0;
+    color: white;
 }
 
-/* ===== АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ ===== */
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .theater-detail__content {
+        gap: 40px;
+    }
+    
+    .header__logo {
+        font-size: 28px;
+    }
+}
 
 @media (max-width: 1024px) {
     .theater-detail__content {
-        padding: 0 40px;
         gap: 40px;
         flex-wrap: wrap;
         justify-content: center;
@@ -268,37 +311,44 @@
     }
 }
 
-@media (max-width: 768px) {
-    .header {
-        padding: 20px 15px 20px 15px;
-        flex-direction: column;
+@media (max-width: 900px) {
+    .header__inner {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 15px;
-    }
-
-    .menu-button--chambers {
-        font-size: 22px;
-        text-align: center;
-    }
-
-    .menu-button--home {
-        font-size: 16px;
-    }
-
-    /* Блок с тремя театрами - все показываются */
-    .theaters {
+        padding: 15px 20px;
         min-height: auto;
     }
 
-    .theaters__container {
-        padding: 80px 20px 60px 20px;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
+    .header__logo {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
     }
 
-    .theater-card {
+    .header__nav {
         width: 100%;
-        max-width: 300px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .header__nav a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__nav a {
+        font-size: 16px;
+    }
+
+    .theaters__container {
+        padding: 100px 20px 0 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
     }
 
     .theater-card__image {
@@ -308,23 +358,15 @@
 
     .theater-card__title {
         font-size: 28px;
-        line-height: 1.3;
-    }
-
-    /* Детальные секции */
-    .theater-detail {
-        padding-bottom: 50px;
     }
 
     .theater-detail__heading {
         font-size: 28px;
-        padding-top: 40px;
         margin-bottom: 40px;
-        line-height: 1.3;
     }
 
     .theater-detail__content {
-        padding: 0 20px;
+        padding: 0;
         gap: 30px;
         flex-direction: column;
         align-items: center;
@@ -345,7 +387,6 @@
     .theater-detail__button {
         font-size: 20px;
         padding: 8px 25px;
-        margin-bottom: 10px;
     }
 
     .theater-detail__image--left,
@@ -357,7 +398,7 @@
     .theater-detail__address-box {
         width: 280px;
         height: auto;
-        min-height: 180px;
+        min-height: 200px;
     }
 
     .theater-detail__address--overlay {
@@ -367,27 +408,43 @@
     .theater-detail__address {
         font-size: 16px;
         text-align: center;
-        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__inner {
+        min-height: auto;
+        padding: 15px 20px;
     }
 
-    /* Последней секции добавляем больше отступа снизу */
-    .theater-detail:last-child {
-        padding-bottom: 80px;
+    .header__logo {
+        font-size: 20px;
+    }
+
+    .header__nav {
+        gap: 15px;
+    }
+
+    .header__nav a {
+        font-size: 16px;
     }
 }
 
 @media (max-width: 480px) {
-    .menu-button--chambers {
+    .header__logo {
         font-size: 18px;
     }
 
-    .menu-button--home {
+    .header__nav {
+        gap: 10px;
+    }
+
+    .header__nav a {
         font-size: 14px;
     }
 
     .theaters__container {
-        padding: 60px 15px 50px 15px;
-        gap: 40px;
+        padding: 80px 15px 0 15px;
     }
 
     .theater-card__image {
@@ -399,17 +456,8 @@
         font-size: 22px;
     }
 
-    .theater-detail {
-        padding-bottom: 40px;
-    }
-
-    .theater-detail:last-child {
-        padding-bottom: 60px;
-    }
-
     .theater-detail__heading {
         font-size: 22px;
-        padding-top: 30px;
         margin-bottom: 30px;
     }
 
@@ -430,12 +478,11 @@
 
     .theater-detail__address {
         font-size: 14px;
-        margin-bottom: 15px;
     }
 
     .theater-detail__address-box {
         width: 240px;
-        min-height: 160px;
+        min-height: 180px;
         padding: 15px;
     }
 
@@ -447,7 +494,7 @@
 /* Улучшение touch-взаимодействия на мобильных */
 @media (max-width: 768px) {
     button,
-    .menu-button,
+    .header__nav a,
     .theater-card,
     .theater-detail__button,
     .theater-detail__address,
@@ -457,9 +504,8 @@
     }
 
     button:active,
-    .menu-button:active,
-    .theater-card:active,
-    .theater-detail__button:active {
+    .header__nav a:active,
+    .theater-card:active {
         opacity: 0.7;
         transform: scale(0.98);
         transition: all 0.1s ease;

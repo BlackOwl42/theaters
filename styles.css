@@ -44,6 +44,7 @@ body {
     font-family: 'Alegreya SC', serif;
     font-weight: 700;
     font-size: 32px;
+    line-height: 1.2; /* Добавлено */
     line-height: 1.2;
     color: #ffffff;
     text-decoration: none;
@@ -392,9 +393,9 @@ body {
     right: 20px;
     width: 588px;
     height: 362px;
-    background: transparent; /* Убираем полупрозрачный фон */
+    background: transparent;
     padding: 20px 25px;
-    overflow: visible; /* Убираем скролл */
+    overflow: visible;
     border-radius: 0;
     text-align: right;
 }
@@ -475,6 +476,11 @@ body {
     .about__image-content {
         height: auto;
         min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
     }
     
     .about__text-block {
@@ -482,24 +488,17 @@ body {
         top: 0;
         right: 0;
         width: 90%;
-        margin: 20px auto;
+        margin: 0 auto 20px auto;
         height: auto;
+        text-align: center;
     }
     
     .about__button {
         position: relative;
         bottom: auto;
-        margin: 20px auto;
+        left: auto;
         transform: none;
-        display: block;
-    }
-    
-    .about__image-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 30px 0;
+        margin: 0 auto;
     }
 }
 
