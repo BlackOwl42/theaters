@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Камерные театры Петербурга</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем шрифты Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@700&family=Piazzolla:opsz,wght@8..30,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="frame">
+        <header class="header">
+            <div class="container">
+                <div class="header__inner">
+                    <!-- Левая часть: название в одну строку -->
+                    <a href="/" class="header__logo">
+                        Камерные театры Петербурга
+                    </a>
+
+                    <!-- Правая часть: навигация -->
+                    <nav class="header__nav">
+                        <a href="#top3">Топ-3 в 2026</a>
+                        <a href="#who">Кто мы?</a>
+                        <a href="#">Театры</a>
+                        <a href="#contacts">Контакты</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+                <!-- СЕКЦИЯ С ЦИТАТОЙ -->
+        <section class="hero">
+            <div class="container">
+                <div class="quote">
+                    <p class="quote__text">«Театр — не отображающее зеркало, а увеличивающее стекло»<br><span class="quote__author">Владимир Маяковский</span></p>
+                </div>
+            </div>
+            
+            <div class="hero__image">
+                <img src="images/photo1.png">
+            </div>
+            
+            <div class="container">
+               <div class="hero__description">
+    <p class="hero__paragraph">Камерные театры Петербурга — то, что нельзя увидеть издалека, но невозможно забыть, оказавшись внутри. Здесь рождаются спектакли, построенные на близости зрителя<br>и актёра, на глубине истории и силе живых эмоций.</p>
+    
+    <p class="hero__paragraph">Мы собираем лучшие камерные сцены города, рекомендуем спектакли, на которые стоит пойти,<br>и помогаем открыть Петербург с новой стороны — тихой, интимной, театральной.<br>
+    Добро пожаловать в пространство, где большие смыслы живут в малых формах.</p>
+</div>
+            </div>
+        </section>
+
+               <!-- СЕКЦИЯ ТОП-3 СПЕКТАКЛЕЙ -->
+<section class="top-spectacles">
+    <div class="container">
+        <h2 id="top3" class="top-spectacles__title">Топ-3 рекомендуемых спектакля в 2026</h2>
+        
+        <div class="top-spectacles__grid">
+            <!-- Карточка 1 -->
+            <div class="spectacle-card">
+                <img src="images/photo2.png" alt="Спектакль Бесы" class="spectacle-card__image">
+                <div class="spectacle-card__content">
+                    <h3 class="spectacle-card__title">Бесы</h3>
+                    <p class="spectacle-card__theater">Городской театр</p>
+                </div>
+            </div>
+            
+            <!-- Карточка 2 -->
+            <div class="spectacle-card">
+                <img src="images/photo3.png" alt="Спектакль Три" class="spectacle-card__image">
+                <div class="spectacle-card__content">
+                    <h3 class="spectacle-card__title">Три</h3>
+                    <p class="spectacle-card__theater">Камерный театр Малыщинского (КТМ)</p>
+                </div>
+            </div>
+            
+            <!-- Карточка 3 -->
+            <div class="spectacle-card">
+                <img src="images/photo4.png" alt="Спектакль Квадрат" class="spectacle-card__image">
+                <div class="spectacle-card__content">
+                    <h3 class="spectacle-card__title">Квадрат</h3>
+                    <p class="spectacle-card__theater">Плохой театр</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- СЕКЦИЯ "КТО МЫ?" -->
+        <section class="about">
+            <div class="container">
+                <h2 id="who" class="about__title">Кто мы?</h2>
+            </div>
+            
+            <div class="about__image-wrapper">
+                <div class="container about__image-container">
+                    <div class="about__image-content">
+                        <div class="about__text-block">
+                            <p>Мы — студенты Санкт-Петербургского государственного университета промышленных технологий и дизайна, которые решили сделать сайт про камерные театры нашего города.</p>
+                            <p>Цель: показать, что театр бывает не таким, каким его привыкли представлять. В Санкт-Петербурге существует большое количество камерных театров, после посещения которых ни один человек не останется равнодушным к искусству. Мы лично убедились в этом и теперь готовы делиться опытом со всеми желающими.</p>
+                            <p>Если Вам интересно погрузиться в удивительный мир камерных театров, то жмите на кнопку ниже.</p>
+                        </div>
+                        <button class="about__button">Хочу в театр!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- СЕКЦИЯ "КОНТАКТЫ" -->
+        <section class="contacts">
+            <div class="container">
+                <div class="contacts__line"></div>
+                <h2 id="contacts" class="contacts__title">Контакты</h2>
+                <p class="contacts__text">Если хотите, чтобы о вашем театре узнали,<br>напишите нам и мы добавим информацию на сайт!</p>
+                <p class="contacts__email">kamernye.teatry@mail.ru</p>
+            </div>
+        </section>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>

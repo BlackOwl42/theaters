@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #75082E;
+    padding: 49px 80px 36px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-button:hover {
+    opacity: 0.8;
+}
+
+.menu-button--chambers {
+    font-family: 'Alegreya SC', serif;
+    font-size: 32px;
+}
+
+.menu-button--home {
+    font-family: 'Piazzolla', serif;
+    font-size: 20px;
+}
+
+/* Блок с фотографиями театров */
+.theaters {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #F0E7DE;
+    height: 700px;
+}
+
+.theaters__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 170px 80px 0 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.theater-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.theater-card__image {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.theater-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.theater-card__title {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 36px
+}
+
+/* Детальная секция театра */
+.theater-detail {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #75082E;
+    height: auto;
+    min-height: 614px;
+    padding-bottom: 0;
+}
+
+.theater-detail__heading {
+    font-family: 'Alegreya SC', serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding-top: 62px;
+    margin-bottom: 90px;
+    line-height: 36px
+}
+
+.theater-detail__content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 80px;
+    gap: 90px;
+}
+
+/* Левая колонка */
+.theater-detail__left {
+    padding-left: 0;
+    padding-top: 0;
+    flex-shrink: 0;
+}
+
+.theater-detail__image--left {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+.theater-detail__image--left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Центральная колонка */
+.theater-detail__center {
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    flex: 1;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.theater-detail__text {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    line-height: 1.3;
+}
+
+.theater-detail__button {
+    margin-top: auto;
+    background-color: #C89AA9;
+    color: white;
+    font-family: 'Piazzolla', serif;
+    font-weight: 800;
+    font-size: 24px;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 30px;
+    cursor: pointer;
+    box-shadow: 0 0 4px 4px rgba(255, 255, 255, 0.3);
+    transition: opacity 0.3s ease;
+    align-self: flex-start;
+}
+
+.theater-detail__button:hover {
+    opacity: 0.9;
+}
+
+/* Правая колонка */
+.theater-detail__right {
+    padding-right: 0;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.theater-detail__image--right {
+    width: 300px;
+    height: 262px;
+    overflow: hidden;
+}
+
+.theater-detail__image--right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.theater-detail__address {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 18px;
+}
+
+/* Чередование фона для секций */
+.theater-detail--alt {
+    background-color: #F0E7DE;
+}
+
+.theater-detail--alt .theater-detail__heading,
+.theater-detail--alt .theater-detail__text,
+.theater-detail--alt .theater-detail__address {
+    color: black;
+}
+
+.theater-detail--alt .theater-detail__button {
+    background-color: #75082E;
+    box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Прямоугольник вместо фото */
+.theater-detail__address-box {
+    width: 300px;
+    height: 262px;
+    background-color: #C89AA9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Текст адреса поверх плашки */
+.theater-detail__address--overlay {
+    font-weight: 800;
+    margin-top: 0;
+}
+
+/* Дополнительная адаптация для мобильных устройств */
+@media (max-width: 1024px) {
+    .theater-detail__content {
+        padding: 0 40px;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .theater-detail__center {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .theater-detail__button {
+        align-self: center;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-button--chambers {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .menu-button--home {
+        font-size: 16px;
+    }
+
+    .theaters__container {
+        padding: 100px 20px 0 20px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .theater-card__image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .theater-card__title {
+        font-size: 28px;
+    }
+
+    .theater-detail__heading {
+        font-size: 28px;
+        padding-top: 40px;
+        margin-bottom: 40px;
+        line-height: 1.3;
+    }
+
+    .theater-detail__content {
+        padding: 0 20px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .theater-detail__left,
+    .theater-detail__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .theater-detail__text {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .theater-detail__button {
+        font-size: 20px;
+        padding: 8px 25px;
+    }
+
+    .theater-detail__image--left,
+    .theater-detail__image--right {
+        width: 250px;
+        height: 250px;
+    }
+
+    .theater-detail__address-box {
+        width: 280px;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .theater-detail__address--overlay {
+        font-size: 16px;
+    }
+
+    .theater-detail__address {
+        font-size: 16px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-button--chambers {
+        font-size: 18px;
+    }
+
+    .menu-button--home {
+        font-size: 14px;
+    }
+
+    .theaters__container {
+        padding: 80px 15px 0 15px;
+    }
+
+    .theater-card__image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .theater-card__title {
+        font-size: 22px;
+    }
+
+    .theater-detail__heading {
+        font-size: 22px;
+        padding-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .theater-detail__text {
+        font-size: 14px;
+    }
+
+    .theater-detail__button {
+        font-size: 18px;
+        padding: 6px 20px;
+    }
+
+    .theater-detail__image--left,
+    .theater-detail__image--right {
+        width: 200px;
+        height: 200px;
+    }
+
+    .theater-detail__address {
+        font-size: 14px;
+    }
+
+    .theater-detail__address-box {
+        width: 240px;
+        min-height: 180px;
+        padding: 15px;
+    }
+
+    .theater-detail__address--overlay {
+        font-size: 14px;
+    }
+}
+
+/* Улучшение touch-взаимодействия на мобильных */
+@media (max-width: 768px) {
+    button,
+    .header__nav a,
+    .spectacle-card,
+    .theater-card,
+    .about__button,
+    .contacts__email,
+    .theater-detail__button,
+    .theater-detail__address,
+    .theater-detail__image--right img {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+
+    button:active,
+    .header__nav a:active,
+    .spectacle-card:active,
+    .theater-card:active,
+    .about__button:active {
+        opacity: 0.7;
+        transform: scale(0.98);
+        transition: all 0.1s ease;
+    }
+}

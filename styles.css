@@ -1,0 +1,873 @@
+/* Обнуление отступов */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+/* Общий контейнер для всего макета (1440px) */
+.frame {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Контентная зона (1280px) */
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== ШАПКА ===== */
+.header {
+    background-color: #75082E;
+    width: 100%;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 129px;
+}
+
+.header__logo {
+    font-family: 'Alegreya SC', serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.2;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.header__nav {
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.header__nav a {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s;
+}
+
+.header__nav a:hover {
+    opacity: 0.8;
+}
+
+/* ===== СЕКЦИЯ С ЦИТАТОЙ ===== */
+.hero {
+    background-color: #F0E7DE;
+    width: 100%;
+    padding: 72px 0 0 0;
+}
+
+.quote {
+    margin-bottom: 72px;
+}
+
+.quote__text {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #000000;
+    text-align: right;
+}
+
+.quote__author {
+    display: inline-block;
+    margin-top: 0;
+}
+
+.hero__image {
+    width: 100%;
+    height: 309px;
+    margin-bottom: 25px;
+}
+
+.hero__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero__description {
+    max-width: 924px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 72px;
+}
+
+.hero__paragraph {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #000000;
+    text-align: center;
+    margin: 0 0 25px 0;
+}
+
+.hero__paragraph:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== СЕКЦИЯ ТОП-3 СПЕКТАКЛЕЙ ===== */
+.top-spectacles {
+    background-color: #75082E;
+    width: 100%;
+    padding: 60px 0;
+}
+
+.top-spectacles__title {
+    font-family: 'Alegreya SC', serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0 0 60px 0;
+}
+
+.top-spectacles__grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+.spectacle-card {
+    flex: 1;
+    max-width: 299px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.spectacle-card__image {
+    width: 299px !important; /* Принудительная ширина */
+    height: 299px !important; /* Принудительная высота */
+    object-fit: cover; /* Заполняет весь квадрат, обрезая лишнее */
+    display: block;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, 0.25); /* Сдвиг 5px вправо и вниз, blur 10, spread 10 */
+    margin-bottom: 25px;
+    border: none; /* Убираем возможные рамки */
+    outline: none;
+}
+
+.spectacle-card__content {
+    text-align: center;
+}
+
+.spectacle-card__title {
+    font-family: 'Piazzolla', serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+}
+
+.spectacle-card__theater {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* Средние экраны */
+@media (max-width: 1200px) {
+    .header__nav {
+        margin-left: 100px;
+        gap: 15px;
+        justify-content: flex-end;
+    }
+    
+    .header__logo {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .header__nav a {
+        font-size: 18px;
+    }
+    
+    .header__logo {
+        font-size: 26px;
+    }
+}
+
+/* Планшеты */
+@media (max-width: 900px) {
+    .header__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 15px 0;
+    }
+    
+    .header__logo {
+        white-space: normal;
+        text-align: center;
+        width: 100%;
+        font-size: 24px;
+    }
+    
+    .header__nav {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .header__nav a {
+        font-size: 18px;
+    }
+    
+    .quote__text {
+        font-size: 22px;
+    }
+    
+    .hero__paragraph {
+        font-size: 18px;
+    }
+    
+    .top-spectacles__grid {
+        gap: 20px;
+    }
+}
+
+/* Телефоны */
+@media (max-width: 600px) {
+    .header__inner {
+        min-height: 100px;
+    }
+    
+    .header__logo {
+        font-size: 20px;
+    }
+    
+    .header__nav {
+        gap: 15px;
+    }
+    
+    .header__nav a {
+        font-size: 16px;
+    }
+    
+    .quote__text {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .hero__image {
+        height: 200px;
+    }
+    
+    .hero__paragraph {
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    .top-spectacles__grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    
+    .spectacle-card {
+        max-width: 299px;
+        width: 100%;
+    }
+    
+    .top-spectacles__title {
+        font-size: 28px;
+    }
+    
+    .spectacle-card__title,
+    .spectacle-card__theater {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        font-size: 18px;
+    }
+    
+    .header__nav {
+        gap: 10px;
+    }
+    
+    .header__nav a {
+        font-size: 14px;
+    }
+    
+    .quote__text {
+        font-size: 18px;
+    }
+    
+    .hero__image {
+        height: 150px;
+    }
+    
+    .hero__paragraph {
+        font-size: 15px;
+    }
+    
+    .top-spectacles__title {
+        font-size: 24px;
+    }
+}
+/* ===== СЕКЦИЯ "КТО МЫ?" ===== */
+.about {
+    background-color: #F0E7DE;
+    width: 100%;
+    padding: 95px 0 0 0;
+    min-height: 773px;
+}
+
+.about__title {
+    font-family: 'Alegreya SC', serif;
+    font-weight: 400;
+    font-size: 48px;
+    color: #000000;
+    text-align: center;
+    margin: 0 0 60px 0;
+    padding: 0;
+}
+
+.about__image-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about__image-container {
+    max-width: 1279px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+}
+
+.about__image-content {
+    background-image: url('images/photo5.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 506px;
+    position: relative;
+    border-radius: 0;
+}
+
+.about__text-block {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 588px;
+    height: 362px;
+    background: transparent; /* Убираем полупрозрачный фон */
+    padding: 20px 25px;
+    overflow: visible; /* Убираем скролл */
+    border-radius: 0;
+    text-align: right;
+}
+
+.about__text-block p {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.about__text-block p:last-child {
+    margin-bottom: 0;
+}
+
+.about__button {
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 225px;
+    height: 53px;
+    background-color: #F42D2D;
+    border-radius: 40px;
+    border: none;
+    font-family: 'Piazzolla', serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.about__button:hover {
+    opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 1300px) {
+    .about__text-block {
+        width: 500px;
+        height: auto;
+        min-height: 300px;
+    }
+    
+    .about__text-block p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .about__text-block {
+        width: 450px;
+        top: 30px;
+        right: 20px;
+        padding: 15px 20px;
+    }
+    
+    .about__text-block p {
+        font-size: 16px;
+    }
+    
+    .about__button {
+        width: 200px;
+        height: 48px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about__title {
+        font-size: 36px;
+    }
+    
+    .about__image-content {
+        height: auto;
+        min-height: 500px;
+    }
+    
+    .about__text-block {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+    }
+    
+    .about__button {
+        position: relative;
+        bottom: auto;
+        margin: 20px auto;
+        transform: none;
+        display: block;
+    }
+    
+    .about__image-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        padding-top: 50px;
+    }
+    
+    .about__title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .about__text-block {
+        width: 95%;
+        padding: 12px 15px;
+    }
+    
+    .about__text-block p {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+    
+    .about__button {
+        width: 180px;
+        height: 44px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about__title {
+        font-size: 24px;
+    }
+    
+    .about__text-block p {
+        font-size: 13px;
+    }
+    
+    .about__button {
+        width: 160px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+/* ===== СЕКЦИЯ "КОНТАКТЫ" ===== */
+.contacts {
+    background-color: #F0E7DE;
+    width: 100%;
+    min-height: 300px;
+    padding: 0 0 60px 0;
+}
+
+.contacts__line {
+    width: 1280px;
+    max-width: 100%;
+    height: 5px;
+    background-color: #75082E;
+    margin: 0 auto;
+}
+
+.contacts__title {
+    font-family: 'Piazzolla', serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000000;
+    text-align: left;
+    margin: 60px 0 0 0;
+    padding: 0;
+}
+
+.contacts__text {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+    text-align: left;
+    margin: 15px 0 0 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+.contacts__email {
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #000000;
+    text-align: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.contacts__email:hover {
+    opacity: 0.7;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contacts {
+        min-height: auto;
+        padding: 0 0 40px 0;
+    }
+    
+    .contacts__title {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+    
+    .contacts__text {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .contacts__email {
+        font-size: 20px;
+        margin-top: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacts {
+        padding: 0 0 30px 0;
+    }
+    
+    .contacts__title {
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    
+    .contacts__text {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    
+    .contacts__email {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+/* Дополнительная адаптация для мобильных устройств */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header__inner {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 15px;
+    }
+
+    .header__logo {
+        font-size: 24px;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.3;
+    }
+
+    .header__nav {
+        margin-left: 0;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header__nav a {
+        font-size: 16px;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .quote {
+        margin-bottom: 40px;
+    }
+
+    .quote__text {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .hero__image {
+        height: 200px;
+    }
+
+    .hero__description {
+        padding-bottom: 40px;
+    }
+
+    .hero__paragraph {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .top-spectacles {
+        padding: 40px 0;
+    }
+
+    .top-spectacles__title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .top-spectacles__grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .spectacle-card {
+        max-width: 280px;
+    }
+
+    .spectacle-card__image {
+        width: 280px !important;
+        height: 280px !important;
+    }
+
+    .about {
+        padding-top: 50px;
+    }
+
+    .about__title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .about__image-content {
+        height: auto;
+        min-height: 450px;
+        background-position: center;
+    }
+
+    .about__text-block {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .about__text-block p {
+        font-size: 14px;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .about__button {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        margin: 20px auto;
+        width: 200px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    .contacts {
+        padding-bottom: 40px;
+    }
+
+    .contacts__title {
+        font-size: 28px;
+        margin-top: 40px;
+    }
+
+    .contacts__text {
+        font-size: 16px;
+    }
+
+    .contacts__email {
+        font-size: 18px;
+        word-break: break-all;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__logo {
+        font-size: 20px;
+    }
+
+    .header__nav {
+        gap: 12px;
+    }
+
+    .header__nav a {
+        font-size: 14px;
+    }
+
+    .quote__text {
+        font-size: 16px;
+    }
+
+    .hero__image {
+        height: 150px;
+    }
+
+    .hero__paragraph {
+        font-size: 14px;
+    }
+
+    .top-spectacles__title {
+        font-size: 24px;
+    }
+
+    .spectacle-card__title {
+        font-size: 18px;
+    }
+
+    .spectacle-card__theater {
+        font-size: 16px;
+    }
+
+    .about__title {
+        font-size: 26px;
+    }
+
+    .about__text-block p {
+        font-size: 12px;
+    }
+
+    .about__button {
+        width: 180px;
+        height: 44px;
+        font-size: 16px;
+    }
+
+    .contacts__title {
+        font-size: 24px;
+    }
+
+    .contacts__text {
+        font-size: 14px;
+    }
+
+    .contacts__email {
+        font-size: 16px;
+    }
+}
+
+/* Улучшение touch-взаимодействия на мобильных */
+@media (max-width: 768px) {
+    button,
+    .header__nav a,
+    .spectacle-card,
+    .theater-card,
+    .about__button,
+    .contacts__email,
+    .theater-detail__button,
+    .theater-detail__address,
+    .theater-detail__image--right img {
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+    }
+
+    button:active,
+    .header__nav a:active,
+    .spectacle-card:active,
+    .theater-card:active,
+    .about__button:active {
+        opacity: 0.7;
+        transform: scale(0.98);
+        transition: all 0.1s ease;
+    }
+}
