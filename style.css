@@ -409,6 +409,33 @@ body {
         font-size: 16px;
         text-align: center;
     }
+
+        /* Добавьте это для центрирования правой колонки с адресом */
+    .theater-detail__right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-left: 0;  /* убираем отступ */
+    }
+    
+    /* Картинка адреса по центру */
+    .theater-detail__image--right {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .theater-detail__image--right img {
+        margin: 0 auto;
+    }
+    
+    /* Текст адреса по центру */
+    .theater-detail__address {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 @media (max-width: 600px) {
@@ -427,6 +454,10 @@ body {
 
     .header__nav a {
         font-size: 16px;
+    }
+
+    .theater-detail__address-box {
+        margin: 0 auto;  /* центрируем прямоугольник */
     }
 }
 
@@ -489,6 +520,16 @@ body {
     .theater-detail__address--overlay {
         font-size: 14px;
     }
+
+        .theater-detail__right {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .theater-detail__image--right {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* Улучшение touch-взаимодействия на мобильных */
@@ -511,3 +552,4 @@ body {
         transition: all 0.1s ease;
     }
 }
+
