@@ -345,7 +345,7 @@ body {
     }
 
     .theaters__container {
-        padding: 100px 20px 0 20px;
+        padding: 100px 20px 40px 20px;
         flex-direction: column;
         align-items: center;
         gap: 40px;
@@ -444,7 +444,7 @@ body {
     }
 
     .theaters__container {
-        padding: 80px 15px 0 15px;
+        padding: 80px 15px 40px 15px;
     }
 
     .theater-card__image {
